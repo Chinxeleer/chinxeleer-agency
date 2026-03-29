@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
+import { Route as CallRouteImport } from './routes/call'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -19,6 +20,11 @@ import { Route as ServicesWebDesignRouteImport } from './routes/services/web-des
 const CaseStudiesRoute = CaseStudiesRouteImport.update({
   id: '/case-studies',
   path: '/case-studies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CallRoute = CallRouteImport.update({
+  id: '/call',
+  path: '/call',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogRoute = BlogRouteImport.update({
@@ -51,6 +57,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
+  '/call': typeof CallRoute
   '/case-studies': typeof CaseStudiesRoute
   '/services/web-design': typeof ServicesWebDesignRoute
   '/services/web-development': typeof ServicesWebDevelopmentRoute
@@ -59,6 +66,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
+  '/call': typeof CallRoute
   '/case-studies': typeof CaseStudiesRoute
   '/services/web-design': typeof ServicesWebDesignRoute
   '/services/web-development': typeof ServicesWebDevelopmentRoute
@@ -68,6 +76,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
+  '/call': typeof CallRoute
   '/case-studies': typeof CaseStudiesRoute
   '/services/web-design': typeof ServicesWebDesignRoute
   '/services/web-development': typeof ServicesWebDevelopmentRoute
@@ -78,6 +87,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/blog'
+    | '/call'
     | '/case-studies'
     | '/services/web-design'
     | '/services/web-development'
@@ -86,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/blog'
+    | '/call'
     | '/case-studies'
     | '/services/web-design'
     | '/services/web-development'
@@ -94,6 +105,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/blog'
+    | '/call'
     | '/case-studies'
     | '/services/web-design'
     | '/services/web-development'
@@ -103,6 +115,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRoute
+  CallRoute: typeof CallRoute
   CaseStudiesRoute: typeof CaseStudiesRoute
   ServicesWebDesignRoute: typeof ServicesWebDesignRoute
   ServicesWebDevelopmentRoute: typeof ServicesWebDevelopmentRoute
@@ -115,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/case-studies'
       fullPath: '/case-studies'
       preLoaderRoute: typeof CaseStudiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/call': {
+      id: '/call'
+      path: '/call'
+      fullPath: '/call'
+      preLoaderRoute: typeof CallRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog': {
@@ -159,6 +179,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
+  CallRoute: CallRoute,
   CaseStudiesRoute: CaseStudiesRoute,
   ServicesWebDesignRoute: ServicesWebDesignRoute,
   ServicesWebDevelopmentRoute: ServicesWebDevelopmentRoute,

@@ -98,42 +98,42 @@ function HeroSection() {
 	return (
 		<section
 			ref={containerRef}
-			className="relative flex min-h-screen justify-center overflow-hidden"
+			className="relative section section-sm flex flex-col min-h-screen justify-center overflow-hidden"
 		>
-			<div className="flex flex-col h-full items-center mt-40 z-10 px-6">
-				<div className="flex justify-center md:mb-20 mb-8">
-					<h2 className="badge badge-mauve">Web Agency · Pan-African</h2>
-				</div>
-
-				<div className="grid grid-cols-1 gap-12 md:grid-cols-2 mt-10 items-center">
-					<div className="max-w-xl">
-						<h2 className="title text-4xl md:text-6xl font-bold leading-tight">
-							Your digital presence should open doors — not close them.
+			<div className="flex flex-col md:flex-row h-full items-center justify-around mt-4 lg:mt-40 z-10 px-6">
+				<div className="flex flex-col md:max-w-3xl gap-6">
+					<div className="max-w-9xl flex flex-col">
+						<h2 className="title text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
+							Your website should bring you clients.
+						</h2>
+						<h2 className="title text-4xl md:text-6xl lg:text-8xl font-bold leading-tight text-red">
+							Not Excuses
 						</h2>
 					</div>
-					<div className="flex justify-center items-center">
-						{/* We use 'text-[#D6D6E6]' here so 'currentColor' 
-                          inside the SVG picks up the brand mauve/grey 
-                        */}
-						<Emblem className="text-[#D6D6E6]" height={240} width={240} />
+					<div>
+						<p>
+							I build fast, converting websites and digital systems for South
+							African businesses, designed to look world class and built to
+							actually grow your revenue.
+						</p>
 					</div>
 				</div>
+				<div className="flex justify-center items-center mt-4">
+					<Emblem className="text-[#D6D6E6] size-50 md:size-100 lg:size-150" />
+				</div>
 			</div>
-
-			{/* HAIKEI WAVE — Integrated as the footer of the section */}
-			<div className="absolute bottom-0 left-0 w-full leading-none z-20 pointer-events-none">
-				<svg
-					viewBox="0 475 900 126"
-					preserveAspectRatio="none"
-					className="w-full block"
-					xmlns="http://www.w3.org/2000/svg"
-					aria-hidden="true"
-				>
-					<path
-						d="M0 475L21.5 485C43 495 86 515 128.8 520.5C171.7 526 214.3 517 257.2 509C300 501 343 494 385.8 490C428.7 486 471.3 485 514.2 493.7C557 502.3 600 520.7 642.8 530.8C685.7 541 728.3 543 771.2 541.2C814 539.3 857 533.7 878.5 530.8L900 528L900 601L878.5 601C857 601 814 601 771.2 601C728.3 601 685.7 601 642.8 601C600 601 557 601 514.2 601C471.3 601 428.7 601 385.8 601C343 601 300 601 257.2 601C214.3 601 171.7 601 128.8 601C86 601 43 601 21.5 601L0 601Z"
-						fill="#b4befe"
-					/>
-				</svg>
+			<div className="container container-sm divide-x divide-solid flex gap-4 mt-20 md:mt-4">
+				<div className="p-4 md:p-6">
+					<h3 className="text-2xl md:text-4xl font-black">
+						R5K <span className="text-sm font-light">Starting from</span>
+					</h3>
+				</div>
+				<div className="p-4 md:p-6">
+					<h3 className="text-2xl md:text-4xl font-black">
+						14 days{" "}
+						<span className="text-sm  font-light">Average delivery</span>
+					</h3>
+				</div>
 			</div>
 		</section>
 	);

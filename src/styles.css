@@ -22,7 +22,8 @@
   --color-overlay2: #9399b2;   /* hover text                 */
   --color-subtext0: #a6adc8;   /* body copy                  */
   --color-subtext1: #bac2de;   /* emphasized body            */
-  --color-text:     #cdd6f4;   /* primary headings           */
+  --color-text1:     #cdd6f4;   /* primary headings           */
+  --color-text2:     #4c4f69;   /* primary headings           */
  
   /* ── Primary accent ── */
   --color-mauve:    #cba6f7;   /* CTA buttons · brand mark   */
@@ -45,6 +46,7 @@
   --color-pink:     #f5c2e7;
   --color-flamingo: #f2cdcd;
   --color-rosewater:#f5e0dc;
+  --color-frappe: #eff1f5;
  
   /* ── Spacing scale ── */
   --spacing-18: 4.5rem;
@@ -72,8 +74,8 @@
  
   html {
     font-family: var(--font-sans);
-    background-color: var(--color-base);
-    color: var(--color-text);
+    background-color: var(--color-mantle);
+    color: var(--color-text1);
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
   }
@@ -262,9 +264,8 @@
   /* ─ SECTION WRAPPERS ─ */
   .section        { padding: 96px 0; }
   .section-sm     { padding: 64px 0; }
-  .section-color-1 { padding: 96px 0; background: var(--color-mantle); }
-  .section-color-2 { padding: 96px 0; background: var(--color-lavender); }
-  .section-color-3 { padding: 96px 0; background: var(--color-mantle); }
+  .section-color-1 {  background: var(--color-mantle); color: var(--color-text1); }
+  .section-color-2 {  background: var(--color-frappe); color: var(--color-text2); }
   .container      { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
   .container-sm   { max-width: 800px;  margin: 0 auto; padding: 0 48px; }
  
@@ -287,6 +288,12 @@
     border-radius: 50%;
     background: var(--color-green);
     animation: availPulse 2.5s ease-in-out infinite;
+  }
+
+  .text-highlight {
+    position: relative;
+    display: inline-block;
+    color: var(--color-mauve);
   }
  
   /* ─ SCROLL HINT ─ */
