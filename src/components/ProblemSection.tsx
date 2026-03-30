@@ -1,15 +1,23 @@
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(useGSAP, SplitText);
+
 function ProblemSection() {
 	// apply split text on the highlighted parts of the problem definition
+
+
+
 	return (
 		<section className="section section-sm section-color-2 min-h-screen">
 			<div className="container container-sm">
 				<h2 className="title text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
 					Every day your business has{" "}
-					<span className="text-base">no online presence</span> or a slow,
+					<span className="highlighted-problem-text text-red">no online presence</span> or a slow,
 					outdated one, a competitor with a better site{" "}
-					<span className="text-base">takes your customer</span>. That's not a
+					<span className="highlighted-problem-text text-teal">takes your customer</span>. That's not a
 					design problem.{" "}
-					<span className="text-base">It's a revenue problem</span>.
+					<span className="highlighted-problem-text text-peach">It's a revenue problem</span>.
 				</h2>
 			</div>
 			<div className="container container-sm mt-20 flex flex-col md:flex-row justify-between w-full">

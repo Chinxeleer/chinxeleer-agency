@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles.css";
 import { useGSAP } from "@gsap/react";
 import NavBar from "@/components/NavBar";
+import ShaderGradientBackground from "@/components/ShaderGradient";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -18,13 +19,14 @@ export const Route = createRootRoute({
 function RootComponent() {
 	useGSAP(() => {
 		ScrollSmoother.create({
-			smooth: 2,
+			smooth: 4,
 			effects: true,
 			normalizeScroll: true,
 		});
 	});
 	return (
 		<main id="smooth-content">
+			<ShaderGradientBackground />
 			<NavBar />
 			<Outlet />
 			<TanStackDevtools

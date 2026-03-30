@@ -71,6 +71,9 @@
 /* ── Base resets ── */
 @layer base {
   *, *::before, *::after { box-sizing: border-box; }
+  body{
+    background: transparent;
+  }
  
   html {
     font-family: var(--font-sans);
@@ -308,17 +311,5 @@
     background: linear-gradient(to bottom, var(--color-mauve), transparent);
     animation: scrollBarDrop 2.2s ease-in-out infinite;
   }
-}
- 
-/* ── Keyframes ── */
-@keyframes availPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(166, 227, 161, 0.5); }
-  60%       { box-shadow: 0 0 0 5px rgba(166, 227, 161, 0); }
-}
- 
-@keyframes scrollBarDrop {
-  0%   { transform: translateY(-100%); }
-  50%  { transform: translateY(0%); }
-  100% { transform: translateY(100%); }
 }
  

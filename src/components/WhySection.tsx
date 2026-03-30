@@ -41,7 +41,7 @@ function WhySection() {
 	];
 
 	return (
-		<section className="section section-sm section-color-1 min-h-screen">
+		<section className="section section-sm min-h-screen">
 			<div className="container container-sm">
 				<h3 className="title text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
 					It does not have to be like that. Here's the difference.
@@ -55,7 +55,7 @@ function WhySection() {
 			<div className="container container-sm mt-20 flex flex-col md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 gap-15 w-full">
 				{valueProps.map((prop, index) => (
 					<div className="p-4 md:w-3/3" key={index}>
-						<h3 className="title text-4xl text-start md:text-6xl lg:text-8xl font-bold leading-tight w-full md:w-2/3">
+						<h3 className="text-4xl text-start md:text-6xl lg:text-8xl font-bold leading-tight w-full md:w-2/3">
 							{prop.title}
 						</h3>
 						<h4 className="subtitle text-xl md:text-2xl lg:text-3xl font-bold">

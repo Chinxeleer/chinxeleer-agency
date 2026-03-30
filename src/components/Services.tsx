@@ -29,7 +29,7 @@ const Services = () => {
 	return (
 		<section className="section section-sm section-color-2 min-h-screen">
 			<div className="container container-sm flex flex-col gap-20">
-				<h2 className="title text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
+				<h2 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
 					Three ways we can grow your business online.
 				</h2>
 				<div className="flex flex-col items-center gap-15 w-full divide-y divide-overlay1">

@@ -17,7 +17,6 @@ const Emblem = ({ className, width = 250, height = 190 }: EmblemProps) => {
 			role="img"
 		>
 			<g clipPath="url(#clip0)">
-				{/* Rings - Using 'origin-center' for GSAP rotation */}
 				<path
 					className="emblem-ring origin-center"
 					d="M45 84.6C66.8705 84.6 84.6 66.8705 84.6 45C84.6 23.1295 66.8705 5.40002 45 5.40002C23.1295 5.40002 5.40002 23.1295 5.40002 45C5.40002 66.8705 23.1295 84.6 45 84.6Z"
@@ -42,7 +41,7 @@ const Emblem = ({ className, width = 250, height = 190 }: EmblemProps) => {
 				<path
 					className="emblem-cross origin-center"
 					d="M18.9 18.9L71.1 71.1"
-					stroke="currentColor"
+					stroke="#A6ADC8"
 					strokeWidth="8"
 					strokeLinecap="round"
 					strokeOpacity="0.8"
@@ -50,10 +49,10 @@ const Emblem = ({ className, width = 250, height = 190 }: EmblemProps) => {
 				<path
 					className="emblem-cross origin-center"
 					d="M71.1 18.9L18.9 71.1"
-					stroke="currentColor"
+					stroke="#CBA6F7"
 					strokeWidth="8"
 					strokeLinecap="round"
-					strokeOpacity="0.4"
+					strokeOpacity=""
 				/>
 
 				{/* Central Core */}
@@ -68,7 +67,7 @@ const Emblem = ({ className, width = 250, height = 190 }: EmblemProps) => {
 					cx="45"
 					cy="45"
 					r="1.8"
-					fill="currentColor"
+					fill="black"
 				/>
 
 				{/* Mechanical Axis Ticks */}

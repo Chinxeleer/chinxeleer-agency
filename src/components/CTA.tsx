@@ -2,8 +2,8 @@ import { Link } from "@tanstack/react-router";
 
 function CTA() {
 	return (
-		<section className="section section-sm section-color-1 min-h-screen flex items-center">
-			<div className="container container-sm flex flex-col gap-20 items-center">
+		<section className="section section-sm min-h-screen flex items-center">
+			<div className="container container-sm flex flex-col gap-4 items-center">
 				<h2 className="title text-4xl md:text-6xl lg:text-8xl text-center font-bold leading-tight">
 					Your business deserves a website that works.
 				</h2>
