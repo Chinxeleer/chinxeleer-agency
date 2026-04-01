@@ -3,7 +3,7 @@ function CommonQuestionsSection() {
 		{
 			question: "I've been burned by a freelancer before.",
 			answer:
-				"Fixed price proposals. Defined scope. Milestone payments. You never pay for work you haven't seen. And I actually show up after launch.",
+				"Fixed price proposals. Defined scope. Milestone payments. You never pay for work you haven't seen. And we actually show up after launch.",
 		},
 		{
 			question: "I don't know what I need.",

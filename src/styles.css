@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
   /* ── Google Fonts ── */
   --font-display: "Urbanist", Georgia, serif;
-  --font-sans:    "Inter", system-ui, sans-serif;
+  --font-sans:    "Inter Tight", system-ui, sans-serif;
  
   /* ── Catppuccin Mocha backgrounds ── */
   --color-crust:    #11111b;   /* nav · footer · deepest bg  */
@@ -84,15 +83,17 @@
   }
  
   h1, h2, h3, h4 {
-    font-family: var(--font-display);
+    font-family: var(--font-sans);
     font-weight: 300;
     line-height: 1.1;
+    opacity: 0.85;
     letter-spacing: -0.015em;
     color: var(--color-text);
   }
  
   p {
     font-family: var(--font-sans);
+    opacity: 0.90;
     font-weight: 300;
     line-height: 1.75;
     color: var(--color-subtext0);
@@ -244,7 +245,7 @@
  
   /* ─ NAV ─ */
   .nav-base {
-    position: fixed;
+    position: sticky;
     top: 0; left: 0; right: 0;
     z-index: 50;
     display: flex;
@@ -257,12 +258,11 @@
     border-bottom: 1px solid transparent;
   }
   .nav-transparent { background: transparent; }
-  .nav-scrolled {
-    background: rgba(17, 17, 27, 0.92);
+  /* .nav-scrolled {
     border-bottom-color: rgba(49, 50, 68, 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-  }
+  } */
  
   /* ─ SECTION WRAPPERS ─ */
   .section        { padding: 96px 0; }
